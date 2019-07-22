@@ -16,10 +16,10 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path,include
 from django.conf import settings
+from django.contrib import admin
 from django.conf.urls.static import static
 
 urlpatterns = [
-    path('admin/', admin.site.urls),
     path('accounts/', include('accounts.urls')),
     path('accounts/', include('django.contrib.auth.urls')), 
     path('cart/',include('cart.urls')),
@@ -28,6 +28,7 @@ urlpatterns = [
     path('payment/', include('payment.urls')),
     path('search/',include('search.urls',namespace='search')),
     path('',include('shop.urls')),
+    path('admin/', admin.site.urls),
 ]
 
 if settings.DEBUG:
