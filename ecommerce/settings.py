@@ -21,7 +21,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 # See https://docs.djangoproject.com/en/2.2/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'd01efdcf3e1467594477b9df5a280984c3d3a5ddb4cc617f'
+SECRET_KEY = '5_+vh8)(w2l!j-rzqrr$up#s7a*j#g=d97%7#qt**u!ek*e&wb'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -142,8 +142,6 @@ STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media/')
 
-#CKeditor settings
-CKEDITOR_UPLOAD_PATH = "uploads/"
 
 # Stripe and Braintree Settings
 
@@ -168,8 +166,6 @@ LOGOUT_REDIRECT_URL = '/'
 PAYPAL_TEST = True
 
 PAYPAL_RECEIVER_EMAIL = 'aemam383@gmail.com'
-
-AUTHENTICATION_BACKENDS = ['path.to.auth.module.EmailBackend']
 
 
 django_heroku.settings(locals())
