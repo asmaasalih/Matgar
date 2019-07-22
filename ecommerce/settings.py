@@ -175,10 +175,3 @@ AUTHENTICATION_BACKENDS = ['path.to.auth.module.EmailBackend']
 
 
 django_heroku.settings(locals())
-
-ecommerce.config["SQLALCHEMY_DATABASE_URL"] = os.environ["DATABASE_URL"]
-
-prod_db  =  dj_database_url.config(conn_max_age=500)
-DATABASES['default'].update(prod_db)
-
-ALLOWED_HOSTS = ['matgary.herokuapp.com','127.0.0.1']
