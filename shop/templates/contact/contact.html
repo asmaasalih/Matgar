@@ -1,6 +1,5 @@
 {% extends 'base.html'%}
 {% load static %}
-{% load bootstrap4 %}
 {% block title %}
     تواصل معنا 
 {% endblock title %}
@@ -16,10 +15,9 @@
         <div class="col-sm-6 col-12">
             <form action="" method="POST" class="text-right">
                 {% csrf_token %}
-                {% bootstrap_form form %}
-                {% buttons %}
-                    <button type="submit" class="btn btn-secondary">إرسال</button>
-                {% endbuttons %}
+                {{ form }}
+                <button type="submit" class="btn btn-secondary">إرسال</button>
+                
             </form>
         </div>
     </div>        
