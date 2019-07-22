@@ -1,0 +1,6 @@
+<form method="GET" action="{% url 'search:searchproducts' %}" class="form my-2 my-lg-0" value='{{request.GET.q}}'>
+    <input
+        type="search" placeholder="إبحث عن منتج" name="q"
+        aria-label="بحث" value="{{request.GET.q}}">
+    <input type="submit" class="search" name="submit" value="Search"/>         
+</form>

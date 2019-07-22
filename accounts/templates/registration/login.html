@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+{% load static %}
+{% block title %}
+    تسجيل الدخول
+{% endblock title%}
+{% block content %}
+<div class="contaner" style="margin-top: 100px;">
+  <div class="col-sm-6 col-12" style="margin: auto;">
+    <form  class="text-right border border-light p-5" action="{% url 'accounts:login' %}" method="POST" style=" background-color:white;">
+      <p class="h4 mb-4 text-center">تسجيل الدخول</p>
+      {% if form.errors %}
+        <p>البريد الالكتروني أو كلمة المرور ليست صحيحة أعد المحاولة مرة اخرى</p>
+      {% endif %} 
+      {% csrf_token %}
+      {{ form }}
+      <br>
+      <br>
+      {# Assumes you setup the password_reset view in your URLconf #}
+      <p dir="rtl"><a style="color: black;" href="{% url 'password_reset' %}">نسيت كلمة المرور؟</a></p>
+
+      <button class="btn btn-info btn-block my-4" type="submit">تسجيل الدخول</button>
+      <div>
+        <a class="text-center" style="color: black;" href="{% url 'accounts:signup' %}">إنشاء حساب جديد</a>
+      </div>
+    </form>
+  </div>  
+</div>      
+{% endblock content %}

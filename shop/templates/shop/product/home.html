@@ -1,0 +1,237 @@
+{% extends "base.html" %}
+{% load static %}
+{% block title %}
+	{% if category %} 
+		{{category.name}}
+	{% else %}
+		Home	
+	{% endif %}
+{% endblock title %}
+{% block content %}
+<!--Carousel Wrapper-->
+<div id="carousel-example-1z" class="carousel slide carousel-fade pt-4" data-ride="carousel">
+
+	<!--Indicators-->
+	<ol class="carousel-indicators">
+		<li data-target="#carousel-example-1z" data-slide-to="0" class="active"></li>
+		<li data-target="#carousel-example-1z" data-slide-to="1"></li>
+		<li data-target="#carousel-example-1z" data-slide-to="2"></li>
+	</ol>
+	<!--/.Indicators-->
+	
+	<!--Slides-->
+	<div class="carousel-inner" role="listbox">
+	
+		<!--First slide-->
+		<div class="carousel-item active">
+			<div class="view" style="background-image: url('https://cdn2.shopify.com/s/files/1/2856/7802/files/Depositphotos_8446831_xl-2015_1728x.jpg?v=1555760466'); background-repeat: no-repeat; background-size: cover; background-position: center center;">
+	
+			  <!-- Mask & flexbox options-->
+			  <div class="mask rgba-black-strong d-flex justify-content-center align-items-center">
+	
+				<!-- Content -->
+				<div class="text-center white-text mx-5 wow fadeIn">
+				  <h1 class="mb-4">
+					رواد الاحتراف للمجوهرات
+				  </h1>
+	
+				  <p>
+					الأناقة والابداع والروعة في المجوهرات.
+				  </p>
+	
+				  <p class="mb-4 d-none d-md-block">
+					أجمل المجوهرات من جميع أنحاء العالم.
+				  </p>
+	
+				  <a target="_blank" href="{% url 'shop:home' %}" class="btn btn-outline-white btn-lg">تسوق الان
+					<i class="fas fa-shopping-bag"></i>
+				  </a>
+				</div>
+				<!-- Content -->
+	
+			  </div>
+			  <!-- Mask & flexbox options-->
+	
+			</div>
+		  </div>
+		  <!--/First slide-->
+	
+		  <!--Second slide-->
+		  <div class="carousel-item">
+			<div class="view" style="background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR-CTMiEceGXuY3U0_w__j9mgXL-NzBe0fXqdDm8oToU9LQDxTrGw'); background-repeat: no-repeat; background-size: cover; background-position: center center;">
+	
+			  <!-- Mask & flexbox options-->
+			  <div class="mask rgba-black-strong d-flex justify-content-center align-items-center">
+	
+				<!-- Content -->
+				<div class="text-center white-text mx-5 wow fadeIn">
+				  <h1 class="mb-4">
+					رواد الاحتراف للمجوهرات
+				  </h1>
+	
+				  <p>
+					الخيار الأول لعشاق المجوهرات وملاذ جميع عملاء المجوهرات في جميع أنحاء العالم.
+				  </p>
+	
+				  <p class="mb-4 d-none d-md-block">
+					 متعة وسهولة في التصفح والبحث عن القطع وسهولة الدفع بعدة طرق .
+				  </p>
+	
+				  <a target="_blank" href="{% url 'shop:home' %}" class="btn btn-outline-white btn-lg">تسوق الان
+					<i class="fas fa-shopping-bag"></i>
+				  </a>
+				</div>
+				<!-- Content -->
+	
+			  </div>
+			  <!-- Mask & flexbox options-->
+	
+			</div>
+		  </div>
+		  <!--/Second slide-->
+	
+		  <!--Third slide-->
+		  <div class="carousel-item">
+			<div class="view" style="background-image: url('https://cdn2.shopify.com/s/files/1/2856/7802/files/19326827_1728x.jpg?v=1556613223'); background-repeat: no-repeat; background-size: cover;
+				background-position: center center;">
+	
+			  <!-- Mask & flexbox options-->
+			  <div class="mask rgba-black-strong d-flex justify-content-center align-items-center">
+	
+				<!-- Content -->
+				<div class="text-center white-text mx-5 wow fadeIn">
+				  <h1 class="mb-4">
+					رواد الاحتراف للمجوهرات
+				  </h1>
+	
+				  <p>
+					توفير أجمل وأكبر تشكيلة للمجوهرات مصحوبة بالجودة العالية والمصداقية .
+				  </p>
+	
+				  <p class="mb-4 d-none d-md-block">
+					 <div class=""></div>لا تفوتوا متعة وسهولة التسوق الالكتروني وكسب العديد من النقاط والجوائز مع رواد الاحتراف من خلال الموقع
+				  </p>
+	
+				  <a target="_blank" href="{% url 'shop:home' %}" class="btn btn-outline-white btn-lg">تسوق الان
+					<i class="fas fa-shopping-bag"></i>
+				  </a>
+				</div>
+				<!-- Content -->
+	
+			  </div>
+			  <!-- Mask & flexbox options-->
+	
+			</div>
+		  </div>
+		  <!--/Third slide-->
+	
+		</div>
+		<!--/.Slides-->
+	
+		<!--Controls-->
+		<a class="carousel-control-prev" href="#carousel-example-1z" role="button" data-slide="prev">
+		  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+		  <span class="sr-only">Previous</span>
+		</a>
+		<a class="carousel-control-next" href="#carousel-example-1z" role="button" data-slide="next">
+		  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+		  <span class="sr-only">Next</span>
+		</a>
+		<!--/.Controls-->
+	
+	  </div>
+	  <!--/.Carousel Wrapper-->
+
+ <!--Main layout-->
+ <main>
+	<div class="container">
+	
+		<!--Navbar-->
+		<nav class="navbar navbar-expand-lg navbar-dark secondary-color lighten-3 mt-3 mb-5 justify-content-between">
+	
+			<!-- Navbar brand -->
+			<span class="navbar-brand">الاقسام:</span>
+	
+			<!-- Collapse button -->
+			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#basicExampleNav"
+			  aria-controls="basicExampleNav" aria-expanded="false" aria-label="Toggle navigation">
+			  <span class="navbar-toggler-icon"></span>
+			</button>
+	
+			<!-- Collapsible content -->
+			<div class="collapse navbar-collapse" id="basicExampleNav">
+	
+			  <!-- Links -->
+			  <ul class="navbar-nav ml-auto">
+				<li class="nav-item active"
+					{% if not category %}
+						class = "selected"	
+					{% endif %}>
+				  <a class="nav-link" href="{% url 'shop:product_list' %}">الكل
+					<span class="sr-only">(current)</span>
+				  </a>
+				</li>
+				{% for cat in categories %}
+				<li class="nav-item"
+				   	{% if category.slug == cat.slug %}
+						class = "selected"	
+			      	{% endif %}>
+				  <a class="nav-link" href="{{cat.get_absolute_url}}">{{cat.name}}</a>
+				</li><p>    </p>
+				{% endfor %}
+			  </ul>
+			  <!-- Links -->
+			  {% include 'search/search_form.html' %}
+			
+			</div>
+			<!-- Collapsible content -->
+	
+		</nav>
+		<!--/.Navbar-->	  
+
+
+	<div class="container main">		
+
+	    <section class="text-center mb-4">
+
+        	<!--Grid row-->
+        	<div class="row wow fadeIn cont">
+
+				<div class="col-lg-3 col-md-6 mb-4">
+					<div class="item">
+						<!--Zoom effect-->
+						<div class="view overlay zoom">
+							<figure>
+								<img src="https://cdn.shopify.com/s/files/1/2856/7802/collections/shutterstock_721940854_540x.jpg?v=1521094622" class="img-fluid " alt="all products">
+								<h4 class="title"><a href="{% url 'shop:product_list' %}"> كل الاصناف</a></h4>
+								<div class="mask flex-center">
+									<a href="{% url 'shop:product_list' %}"><p class="text">عرض الكل</p></a>
+								</div>
+							</figure>	
+						</div>
+					</div>
+				</div>		
+				{% for cat in categories %}
+				<div class="col-lg-3 col-md-6 mb-4">
+					<div class="item">
+						<!--Zoom effect-->
+						<div class="view overlay zoom">
+							<figure>
+								<img src="{{ cat.img.url}}" class="img-fluid " alt="{{ cat.name }}">
+								<h4 class="title"><a href="{{cat.get_absolute_url}}"> {{ cat.name }}</a></h4>
+								<div class="mask flex-center">
+									<a href="{{cat.get_absolute_url}}"><p class="text">عرض الكل</p></a>
+								</div>
+							</figure>	
+						</div>
+					</div>
+				</div>		
+				{% endfor %}	
+			</div>
+		</section>	
+					
+		
+	</div>
+</main>			
+{% endblock %}
+

@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+
+{% block title_ %}
+	الدفع باستخدام paypal
+{% endblock title_ %}
+
+
+{% block content %}
+<div class="container" style="margin-top: 100px">
+	<div class="payment">
+		<h1>الدفع باستخدام paypal</h1>
+		{{ form.render }}
+	</div>
+</div>
+{% endblock content %}

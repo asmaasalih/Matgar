@@ -1,0 +1,15 @@
+braintree==3.54.0
+dj-database-url==0.5.0
+django==2.2
+django-allauth==0.39.1
+django-heroku==0.3.1
+django-payments==0.13.0
+django-paypal==1.0.0
+gunicorn==19.9.0
+Jinja2==2.10.1
+Pillow==6.0.0
+psycopg2==2.8.3
+pytz==2019.1
+stripe==2.30.1
+Werkzeug==0.15.2
+whitenoise==4.1.3

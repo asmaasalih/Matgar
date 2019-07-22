@@ -1,0 +1,103 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+    <div class="container" style="margin-top: 100px;">
+        <!--Navbar-->
+        <nav class="navbar navbar-expand-lg navbar-dark secondary-color lighten-3 mt-3 mb-5 justify-content-between">
+                
+            <!-- Navbar brand -->
+            <span class="navbar-brand">الاقسام:</span>
+                    
+            <!-- Collapse button -->
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#basicExampleNav"
+                aria-controls="basicExampleNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+                    
+            <!-- Collapsible content -->
+            <div class="collapse navbar-collapse" id="basicExampleNav">
+                    
+                <!-- Links -->
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item active"
+                        {% if not category %}
+                            class = "selected"	
+                        {% endif %}>
+                        <a class="nav-link" href="{% url 'shop:product_list' %}">الكل
+                            <span class="sr-only">(current)</span>
+                        </a>
+                    </li>
+                    {% for cat in categories %}
+                    <li class="nav-item"
+                        {% if category.slug == cat.slug %}
+                            class = "selected"	
+                        {% endif %}>
+                        <a class="nav-link" href="{{cat.get_absolute_url}}">{{cat.name}}</a>
+                    </li>
+                    {% endfor %}
+                </ul>
+                <!-- Links -->
+                    
+                {% include 'search/search_form.html' %}
+            </div>
+        <!-- Collapsible content -->
+                    
+        </nav>
+        <!--/.Navbar-->	  
+            
+        <div class="row">
+            {% if submitbutton == 'Search' and request.GET.q != '' %}
+            {% if results %}
+            <div class="col-12 mb-3 text-right">
+                نتائج البحث عن <b>{{request.GET.q}}</b>
+                <hr>
+                <div class="row wow fadeIn">
+                {% for prod in results %}
+                    <!--Grid column-->     
+                    <div class="col-lg-3 col-md-6 mb-4">
+                        <!--Card-->
+                        <div class="card">
+                            <!--Card image-->
+                            <div class="view overlay">
+                                <a href="{{ prod.get_absolute_url }}">
+                                    <img src="
+                                    {% if prod.image %}
+                                        {{ prod.image.url}}
+                                    {% else %}
+                                        {% static 'img/default.png' %}
+                                    {% endif %}" class="card-img-top" alt="">
+                                </a>    
+                            </div>
+                            <!--Card image-->
+        
+                            <!--Card content-->
+                            <div class="card-body text-center">
+                                <!--Category & Title-->
+                                <a href="{{ prod.get_absolute_url }}" class="grey-text">
+                                    <h5>{{ prod.name }}</h5>
+                                </a>    
+                                <h4 class="text-warning">
+                                    <strong>{{ prod.price }} SAR</strong>
+                                </h4>
+        
+                            </div>
+                            <!--Card content-->
+        
+                        </div>
+                        <!--Card-->
+        
+                    </div>
+                    <!--Grid column-->    
+                {% endfor %}
+                </div>
+                {% else %}
+                <div class="col-12">
+                    <hr>
+                    <p>لا يوجد نتائج بهذا الاسم</p>
+                </div>
+                {% endif %}
+                {% endif %}
+            </div>
+        </div>
+    </div>
+{% endblock content %}
