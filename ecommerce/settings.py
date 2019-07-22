@@ -46,8 +46,6 @@ INSTALLED_APPS = [
     'accounts.apps.AccountsConfig',
     'stripe',
     'search',
-    'bootstrap4',
-    'ckeditor',
 ]
 
 MIDDLEWARE = [
