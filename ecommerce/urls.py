@@ -28,7 +28,6 @@ urlpatterns = [
     path('payment/', include('payment.urls')),
     path('search/',include('search.urls',namespace='search')),
     path('',include('shop.urls')),
-    path('ckeditor/', include('ckeditor_uploader.urls')),
 ]
 
 if settings.DEBUG:
