@@ -13,6 +13,7 @@ django-allauth==0.39.1
 django-heroku==0.3.1
 django-payments==0.13.0
 django-paypal==1.0.0
+django-reset-migrations==0.3.1
 gunicorn==19.9.0
 idna==2.8
 importlib-metadata==0.18
