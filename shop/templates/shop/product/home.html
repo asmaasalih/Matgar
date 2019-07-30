@@ -1,10 +1,10 @@
-{% extends "base.html" %}
+{% extends "base/base.html" %}
 {% load static %}
 {% block title %}
 	{% if category %} 
 		{{category.name}}
 	{% else %}
-		Home	
+		الرئيسية	
 	{% endif %}
 {% endblock title %}
 {% block content %}
@@ -217,7 +217,9 @@
 						<!--Zoom effect-->
 						<div class="view overlay zoom">
 							<figure>
+								{% if cat.img %}
 								<img src="{{ cat.img.url}}" class="img-fluid " alt="{{ cat.name }}">
+								{% endif %}
 								<h4 class="title"><a href="{{cat.get_absolute_url}}"> {{ cat.name }}</a></h4>
 								<div class="mask flex-center">
 									<a href="{{cat.get_absolute_url}}"><p class="text">عرض الكل</p></a>

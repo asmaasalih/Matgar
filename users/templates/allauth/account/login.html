@@ -1,0 +1,32 @@
+{% extends "account/base.html" %}
+{% load static %}
+{% load i18n %}
+{% load account socialaccount %}
+
+{% block title %} تسجيل الدخول{% endblock %}
+
+{% block content %}
+<div class="container" style="margin-top: 120px; direction: ltr;">
+  <div class="col-sm-8 col-12" style="margin: auto;padding: 30px;">
+    <form  class="text-right border border-light p-5 form" style="background-color: white;" method="POST" action="{% url 'account_login' %}">
+      <p class="h4 mb-4 text-center">تسجيل الدخول</p>
+      {% csrf_token %}
+      {{form.as_p }}
+      {% if redirect_field_value %}
+      <input  name="{{ redirect_field_name }}" value="{{ redirect_field_value }}" />
+      {% endif %}
+      <div class="forgit">
+        <a  href="{% url 'account_reset_password' %}">نسيت كلمة المرور؟</a>
+      </div>
+      <div class="row">
+        <div class="login col-sm-6 col-lg-4">
+          <button  type="submit">دخول</button>
+        </div>
+        <div class="col-sm-6 col-lg-4 signup">
+          <a href="{{ signup_url }}" class="link">  حساب جديد</a>
+        </div>
+      </div>
+    </form>
+  </div>
+</div>
+{% endblock %}

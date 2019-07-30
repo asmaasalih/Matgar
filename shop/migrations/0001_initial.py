@@ -32,7 +32,6 @@ class Migration(migrations.Migration):
                 ('name', models.CharField(db_index=True, max_length=200)),
                 ('slug', models.SlugField(max_length=200)),
                 ('Image', models.ImageField(blank=True, upload_to='')),
-                ('description', models.TextField(blank=True)),
                 ('price', models.DecimalField(decimal_places=2, max_digits=10)),
                 ('stock', models.PositiveIntegerField()),
                 ('available', models.BooleanField(default=True)),
