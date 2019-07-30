@@ -38,6 +38,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'django.contrib.sites',
 
     'shop.apps.ShopConfig',
     'cart.apps.CartConfig',
@@ -47,8 +48,6 @@ INSTALLED_APPS = [
     'stripe',
     'search.apps.SearchConfig',
     'users.apps.UsersConfig',
-
-    'django.contrib.sites',
 
     'allauth',
     'allauth.account',
