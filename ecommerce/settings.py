@@ -39,6 +39,9 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'django.contrib.sites',
+    'allauth',
+    'allauth.account',
+    'allauth.socialaccount',
 
     'shop.apps.ShopConfig',
     'cart.apps.CartConfig',
@@ -49,9 +52,7 @@ INSTALLED_APPS = [
     'search.apps.SearchConfig',
     'users.apps.UsersConfig',
 
-    'allauth',
-    'allauth.account',
-    'allauth.socialaccount',
+    
 ]
 
 AUTH_USER_MODEL = 'users.CustomUser'
