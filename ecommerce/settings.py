@@ -32,12 +32,13 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
-    'django.contrib.admin',
+    #'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+
     'django.contrib.sites',
     'allauth',
     'allauth.account',
@@ -51,9 +52,13 @@ INSTALLED_APPS = [
     'stripe',
     'search.apps.SearchConfig',
     'users.apps.UsersConfig',
-
     
 ]
+SITE_ID = 1
+MIGRATION_MODULES = {
+    'sites': 'django.contrib.sites.migrations'
+}
+
 
 AUTH_USER_MODEL = 'users.CustomUser'
 
@@ -67,8 +72,6 @@ MIDDLEWARE = [
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
-
-
 
 
 ROOT_URLCONF = 'ecommerce.urls'
@@ -189,7 +192,7 @@ AUTHENTICATION_BACKENDS = (
     "allauth.account.auth_backends.AuthenticationBackend",
 )
 
-SITE_ID = 1
+
 
 # emaillogin redirect/settings.py
 LOGIN_REDIRECT_URL = '/'
