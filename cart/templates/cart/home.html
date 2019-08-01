@@ -4,9 +4,10 @@
 <div class="container" style="margin-top: 160px; margin-bottom: 50px;">
 <section>
 {% if cart.get_total_items > 0 %}
+<h2 class="cart-title">سلة التسوق ({{cart.get_total_items}})</h2>
 <div class="row">
   <div class="col-md-9 col-xs-12 left-body">
-      <h2 class="cart-title">سلة التسوق ({{cart.get_total_items}})</h2>
+      
       {% for item in cart %}
       {% with  product=item.product %}
       <div class="cart-item">
