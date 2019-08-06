@@ -67,12 +67,11 @@
                         <!--Card image-->
                         <div class="view overlay">
                             <a href="{{ prod.get_absolute_url }}">
-                                <img src="
                                 {% if prod.image %}
-                                    {{ prod.image.url}}
+                                <img src="{{ prod.image.url}}" class="card-img-top" alt="">
                                 {% else %}
-                                    {% static 'img/default.png' %}
-                                {% endif %}" class="card-img-top" alt="">
+                                <img src="https://assetscdn1.paytm.com/images/catalog/product/J/JE/JEWSUKKHI-TRADISUKK21010C829906/1562703274373_13.jpg?imwidth=282&impolicy=hq" class="card-img-top" alt="">
+                                {% endif %}" 
                             </a>    
                         </div>
                         <!--Card image-->
