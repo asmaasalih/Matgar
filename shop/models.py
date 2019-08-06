@@ -31,7 +31,7 @@ class Product(models.Model):
 	category  = models.ForeignKey(Category,related_name='product',on_delete=models.CASCADE)
 	name 	  = models.CharField(max_length=200,db_index=True)
 	slug 	  = models.SlugField(max_length=200,db_index=True)
-	image 	  = models.ImageField()
+	image 	  = models.ImageField(default="https://www.caratlane.com/blog/wp-content/uploads/2017/04/Block-Post.jpg")
 	weight    = models.FloatField(default=True)
 	caliber   = models.CharField(max_length=2,choices=caliber_choices,default='21')
 	price 	  = models.DecimalField(max_digits=10,decimal_places=2)
